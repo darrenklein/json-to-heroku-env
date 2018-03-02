@@ -9,6 +9,7 @@
   "author": "Darren Klein",
   "license": "MIT",
   "scripts": {
+    "start": "node ./bin/json-to-heroku-env.js --token `heroku auth:token` --app config-test",
     "lint": "eslint ./bin/*.js ./lib/*.js ./spec/*.js || exit 0"
   },
   "devDependencies": {
@@ -25,7 +26,5 @@
     "env variables",
     "environment variables"
   ],
-  "dependencies": {
-    "base-64": "^0.1.0"
-  }
+  "dependencies": {}
 }
