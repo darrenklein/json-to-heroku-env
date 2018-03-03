@@ -12,6 +12,7 @@
     "json-to-heroku-env": "./bin/json-to-heroku-env.js"
   },
   "scripts": {
+    "execute": "./bin/json-to-heroku-env.js --app config-test --path ../test_data/test-data.js",
     "lint": "eslint ./bin/*.js ./lib/*.js ./spec/*.js || exit 0"
   },
   "devDependencies": {

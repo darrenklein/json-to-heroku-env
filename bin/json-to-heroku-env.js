@@ -5,6 +5,7 @@ const jsonToHerokuEnv = require('../lib/json-to-heroku-env.js');
 
 const token = process.argv.indexOf('--token') > -1 ? `${process.argv[process.argv.indexOf('--token') + 1]}` : undefined;
 const app = process.argv.indexOf('--app') > -1 ? `${process.argv[process.argv.indexOf('--app') + 1]}` : undefined;
+const path = process.argv.indexOf('--path') > -1 ? `${process.argv[process.argv.indexOf('--path') + 1]}` : undefined;
 
 exec('heroku auth:token', (error, stdout) => {
   if (error) {
@@ -12,11 +13,5 @@ exec('heroku auth:token', (error, stdout) => {
     return;
   }
 
-  return (() => jsonToHerokuEnv(stdout, app))();
+  return (() => jsonToHerokuEnv(stdout.trim(), app, path))();
 });
-
-
-
-
-
-// (() => (app ? jsonToHerokuEnv(app, token) : console.error('Please provide a valid \'--app\' option')))();
