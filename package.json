@@ -8,6 +8,9 @@
   },
   "author": "Darren Klein",
   "license": "MIT",
+  "bin": {
+    "json-to-heroku-env": "./bin/json-to-heroku-env.js --token `heroku auth:token`"
+  },
   "scripts": {
     "start": "node ./bin/json-to-heroku-env.js --token `heroku auth:token` --app config-test",
     "lint": "eslint ./bin/*.js ./lib/*.js ./spec/*.js || exit 0"
