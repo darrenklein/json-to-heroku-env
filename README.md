@@ -17,10 +17,10 @@ npm install --save-dev json-to-heroku-env
 
 ## Usage
 
-To run json-to-heroku-env, simply include the following command in the NPM script of your choice:
+To run json-to-heroku-env, simply include the following command and required options in the NPM script of your choice:
 
 ``` JSON
-json-to-heroku-env
+json-to-heroku-env --app YOUR_APP_NAME --path PATH_TO_EXPORTED_JSON
 ```
 
 for example, in your project's `package.json` file:
