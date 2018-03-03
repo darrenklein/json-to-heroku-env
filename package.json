@@ -12,21 +12,18 @@
     "json-to-heroku-env": "./bin/json-to-heroku-env.js"
   },
   "scripts": {
-    "lint": "eslint ./bin/*.js ./lib/*.js ./spec/*.js || exit 0"
+    "lint": "eslint ./bin/*.js ./lib/*.js || exit 0"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jasmine": "^2.9.2",
-    "jasmine": "^3.0.0"
+    "eslint-plugin-import": "^2.9.0"
   },
   "keywords": [
-    "bash",
     "heroku",
     "env",
     "env variables",
-    "environment variables"
-  ],
-  "dependencies": {}
+    "environment variables",
+    "json"
+  ]
 }
