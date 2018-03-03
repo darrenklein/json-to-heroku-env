@@ -1,7 +1,7 @@
 # json-to-heroku-env
 > Set remote Heroku environment variables from local exported JSON data.
 
-json-to-heroku-env is a simple script that can be used to set remote Heroku environment variables from exported JSON data in a local `.js` file.
+[json-to-heroku-env] is a simple script that can be used to set remote Heroku environment variables from exported JSON data in a local `.js` file.
 
 To use json-to-heroku-env, you must have the [Heroku CLI] installed and be logged in.
 
@@ -63,5 +63,6 @@ The current version of the Heroku CLI requires Node version 8.3.0 or greater - t
 
 This module has been formatted according to ESLint's [eslint-config-airbnb-base] rules.
 
+[json-to-heroku-env]: https://www.npmjs.com/package/json-to-heroku-env
 [Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
 [eslint-config-airbnb-base]: https://www.npmjs.com/package/eslint-config-airbnb-base
