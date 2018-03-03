@@ -1,1 +1,0 @@
-module.exports = {'HERE': 'IS', 'SOME': 'DATA'}
