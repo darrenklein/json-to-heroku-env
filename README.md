@@ -56,6 +56,10 @@ json-to-heroku-env has two required options, `--app` and `--path`.
 
 As noted above, you must have installed the Heroku CLI and be logged in for this module to work.
 
+The current version of the Heroku CLI requires Node version 8.3.0 or greater - this has been set in the "engines" field in the package.json file.
+
+You may also provide an additional `--verbose` option, which will log the status and headers from Heroku's response.
+
 ## Notes
 
 This module has been formatted according to ESLint's [eslint-config-airbnb-base] rules.
