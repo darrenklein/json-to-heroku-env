@@ -7,7 +7,7 @@ const jsonToHerokuEnv = require('../lib/json-to-heroku-env.js');
 
 const app = process.argv.indexOf('--app') > -1 ? `${process.argv[process.argv.indexOf('--app') + 1]}` : undefined;
 const path = process.argv.indexOf('--path') > -1 ? `${process.argv[process.argv.indexOf('--path') + 1]}` : undefined;
-const verbose = process.argv.indexOf('--verbose');
+const verbose = process.argv.indexOf('--verbose') !== -1;
 
 if (app && path) {
   exec('heroku auth:token', (error, stdout) => {
