@@ -47,12 +47,12 @@ will set the environment variables `FOO` and `BAR` as 'greetings' and 'my friend
 
 ### Requirements/Options
 
-json-to-heroku-env has two required options, `--app` and `--path`, and the optional `--verbose`.
+json-to-heroku-env has two required options, `--app` and `--path`, and the optional `--response-verbose`.
 
 ``` JSON
 --app my-heroku-app       specify the name of the Heroku app (required)
 --path path/to/file.js    specify the relative path to the .js file (required)
---verbose                 log the status and headers from Heroku's response
+--response-verbose        log the status and headers from Heroku's response
 ```
 
 As noted above, you must have installed the Heroku CLI and be logged in for this module to work.
