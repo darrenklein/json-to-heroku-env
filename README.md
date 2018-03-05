@@ -33,12 +33,6 @@ for example, in your project's `package.json` file:
 }
 ```
 
-Or call it directly from the command line:
-
-``` SH
-npm run json-to-heroku-env --app my-heroku-app --path  path/to/file.js
-```
-
 The keys and values in your exported JSON data will correspond to the environment variables and their values in your Heroku app.
 
 ``` JS
