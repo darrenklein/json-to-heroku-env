@@ -2,6 +2,7 @@
 > Set remote Heroku environment variables from local exported JSON data.
 
 > Upgrading from v1.X.X to v2.X.X? See the [v1-to-v2-upgrade guide]
+
 > Upgrading from v2.X.X to v3.X.X? [v2-to-v3-upgrade guide] in your face
 
 [json-to-heroku-env] is a simple script that can be used to set remote Heroku environment variables from a local file.
@@ -46,11 +47,11 @@ for example, I like to roll:
 }
 ```
 
-The keys and values in your `config` in your JSON data will set the corresponding environment values in your Heroku app.
+The `config` keys and values from your JSON data will set the corresponding environment values in your remote Heroku app.
 
 ### Requirements
 
-As noted above, you must have installed the Heroku CLI and be logged in for this module to work.
+As noted above, you must have installed the [Heroku CLI] and be logged in for this module to work.
 
 The current version of the Heroku CLI requires Node version 8.3.0 or greater - this has been set in the "engines" field in the package.json file.
 
