@@ -1,11 +1,12 @@
 # json-to-heroku-env
 > Set remote Heroku environment variables from local exported JSON data.
 
-> Upgrading from v1.X.X to v2.X.X? See the [upgrade guide]
+> Upgrading from v1.X.X to v2.X.X? See the [v1-to-v2-upgrade guide]
+> Upgrading from v2.X.X to v3.X.X? [v2-to-v3-upgrade guide] in your face
 
-[json-to-heroku-env] is a simple script that can be used to set remote Heroku environment variables from exported JSON data in a local `.js` file.
+[json-to-heroku-env] is a simple script that can be used to set remote Heroku environment variables from a local file.
 
-To use json-to-heroku-env, you must have the [Heroku CLI] installed and be logged in.
+**To use json-to-heroku-env, you must have the [Heroku CLI] installed and be logged in.**
 
 ## Installation
 
@@ -15,51 +16,54 @@ To use json-to-heroku-env, you must have the [Heroku CLI] installed and be logge
 npm install --save-dev json-to-heroku-env
 ```
 
-(I recommend using this package as a dev dependency, but do what you will!)
+(I image that you'll want to use this as a dev dependency, do what you will)
 
 ## Usage
 
-To run json-to-heroku-env, simply include the following command and required options in the NPM script of your choice:
+To use **json-to-heroku-env**, you'll need to create a `.json_to_heroku_envrc.json` file in your app's root directory. The JSON data in that file has two required keys, `app` and `config` - for example:
 
-``` JSON
-json-to-heroku-env --app YOUR_APP_NAME --path PATH_TO_EXPORTED_JSON
-```
-
-for example, in your project's `package.json` file:
-
-``` JSON
-"scripts": {
-  "set-heroku-env-vars": "json-to-heroku-env --app my-heroku-app --path path/to/file.js"
+```JSON
+{
+	"app": "my-heroku-app",
+	"config": {
+		"FOO": "greetings",
+		"BAR": "friends"
+	}
 }
 ```
 
-The keys and values in your exported JSON data will correspond to the environment variables and their values in your Heroku app.
+Then just include the following command in the NPM script of your choice in your `package.json` file:
 
-``` JS
-module.exports = {'FOO': 'greetings', 'BAR': 'my friends'}
+```JSON
+json-to-heroku-env
 ```
 
-will set the environment variables `FOO` and `BAR` as 'greetings' and 'my friends', respectively.
+for example, I like to roll:
 
-### Requirements/Options
-
-json-to-heroku-env has two required options, `--app` and `--path`, and the optional `--response-verbose`.
-
-``` JSON
---app <my-heroku-app>       # specify the name of the Heroku app (required)
---path <path/to/file.js>    # specify the relative path to the .js file (required)
---response-verbose          # log the status and headers from Heroku's response
+```JSON
+"scripts": {
+  "set-heroku-env-vars": "json-to-heroku-env"
+}
 ```
+
+The keys and values in your `config` in your JSON data will set the corresponding environment values in your Heroku app.
+
+### Requirements
 
 As noted above, you must have installed the Heroku CLI and be logged in for this module to work.
 
 The current version of the Heroku CLI requires Node version 8.3.0 or greater - this has been set in the "engines" field in the package.json file.
 
+### Options
+
+You can pass one optional flag into the `json-to-heroku-env ` command, `--response-verbose`, which will log the status and headers from Heroku's response.
+
 ## Notes
 
 This module has been formatted according to ESLint's [eslint-config-airbnb-base] rules.
 
-[upgrade guide]: upgrade_guides/v1-to-v2-upgrade-guide.md
+[v1-to-v2-upgrade guide]: upgrade_guides/v1-to-v2-upgrade-guide.md
+[v2-to-v3-upgrade guide]: upgrade_guides/v2-to-v3-upgrade-guide.md
 [json-to-heroku-env]: https://www.npmjs.com/package/json-to-heroku-env
 [Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
 [eslint-config-airbnb-base]: https://www.npmjs.com/package/eslint-config-airbnb-base
