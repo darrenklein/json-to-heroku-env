@@ -17,7 +17,7 @@
 npm install --save-dev json-to-heroku-env
 ```
 
-(I image that you'll want to use this as a dev dependency, do what you will)
+(I imagine that you'll want to use this as a dev dependency, do what you will)
 
 ## Usage
 
@@ -47,7 +47,9 @@ for example, I like to roll:
 }
 ```
 
-The `config` keys and values from your JSON data will set the corresponding environment values in your remote Heroku app.
+The `config` keys and values from your JSON data will set the corresponding environment values in your remote Heroku app. The example above would set `FOO` and `BAR` as "greetings" and "my friends", respectively.
+
+Note that the environment variables that you set via this script will either be created if they don't yet exist or overwritten if they do - as of now, this script has no destructive behaviors... although I'm considering such a thing for a future release.
 
 ### Requirements
 
