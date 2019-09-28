@@ -1,6 +1,6 @@
 {
   "name": "json-to-heroku-env",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Set remote Heroku environment variables from local exported JSON data.",
   "repository": {
     "type": "git",
